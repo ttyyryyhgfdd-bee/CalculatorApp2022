@@ -30,6 +30,19 @@ namespace Calculator
         #region Multiply
         internal double Multiplication(double num1, double num2) => num1 * num2;
         #endregion
+        #region Power
+        internal double Power(double num1, int power)
+        {
+            if (power == 0) return 1;
+
+            double result = 1;
+            for (int i = 0; i < power; i++)
+            {
+                result *= num1;
+            }
+            return result;
+        }
+        #endregion
         #region Sub
         internal double Subtraction(double num1, double num2) => num1 - num2;
         #endregion
